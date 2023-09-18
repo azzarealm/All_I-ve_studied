@@ -1,0 +1,9 @@
+{%extends 'base_layout.html'%}   
+{%block content%}
+        homepage in art
+        {%for Article in articles %}
+       <a href="{{Article.slug}}"><h2>{{ Article.title}}</h2></a>
+           <p>{{Article.snippet}}</p>
+           <p>{{Article.date}}</p>
+           {%endfor%}
+           {%endblock%}
